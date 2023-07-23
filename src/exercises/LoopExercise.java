@@ -101,6 +101,6 @@ public class LoopExercise {
         }
         System.out.println("sum of array = " + sum);
 
-        System.out.println("test");
+        System.out.println("test#2");
     }
 }
