@@ -100,5 +100,7 @@ public class LoopExercise {
             sum += n[i];
         }
         System.out.println("sum of array = " + sum);
+
+        System.out.println("test");
     }
 }
