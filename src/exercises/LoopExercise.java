@@ -101,6 +101,65 @@ public class LoopExercise {
         }
         System.out.println("sum of array = " + sum);
 
-        System.out.println("test#2");
+        // Exercise 12
+        /*  create a for loop which goes through each string in our array
+            make each word uppercase
+            assign the value in the array to the uppercase string
+            print our resulting array
+        * */
+
+        String[] phrase = {"i", "sure", "do", "love", "bees"};
+        String[] phraseCap = new String[phrase.length];
+
+        for(int i = 0; i < phrase.length; i++) {
+            phraseCap[i] = phrase[i].toUpperCase();
+        }
+        System.out.println(Arrays.toString(phraseCap));
+
+        // Exercise 13
+        /*  create a for loop which goes through each string in our array
+            grab the first letter of our word
+            capitalise the first letter
+            add the capitalised letter to the rest of the provided word
+            assign the value to an array
+            print our resulting array
+        * */
+
+        for(int i = 0; i < phrase.length; i++) {
+            String firstLetter = phrase[i].substring(0,1).toUpperCase();
+            String capitalizedWord = firstLetter + phrase[i].substring(1);
+            phraseCap[i] = capitalizedWord;
+        }
+        System.out.println("phraseCap array[] = " + Arrays.toString(phraseCap));
+
+        // Exercise 14
+        /* Write a program that reverses an array of Strings
+           String[] content = {"you", "are", "how", "hello"}
+           Tip. Use for loop and you to start at highest index.
+           Output should be: hello how are you?. Note question mark at the end */
+        String[] content = {"you", "are", "how", "hello"};
+        String word = "";
+        for(int i = content.length - 1; i >= 0; i--) {
+            word += content[i] + " ";
+        }
+        System.out.println(word.trim() + "?");
+
+        // Exercise 15
+        /* Write a program that adds total amount for this string "0.90, 1.00, 9.00, 8.78, 0.01".
+            Tip:
+            - String input = "0.90, 1.00, 9.00, 8.78, 0.01";
+            - create variable to store result. double result = 0;
+            - convert string to array by using the String[] numbers = input.split(", ") then loop.
+            - convert each string to decimal and add to current result
+                - use Double.parseDouble(string) to convert a string to double */
+        String input = "0.90, 1.00, 9.00, 8.78, 0.01";
+        double result = 0;
+        String[] numbers1 = input.split(", ");
+
+        for(int i = 0; i < numbers1.length; i++) {
+            double realNum = Double.parseDouble(numbers1[i]);
+            result += realNum;
+        }
+        System.out.println(result);
     }
 }
