@@ -1,5 +1,7 @@
 package exercises;
 
+import java.util.Arrays;
+
 public class Conditionals {
 
     public static void main(String[] args) {
@@ -58,8 +60,8 @@ public class Conditionals {
         // create an `if` statement which grabs the first letter of your word and compares it against a Character value
         // print something to the console if the condition is met
         String a = "muffin man";
-        char character = 'n';
-        if(a.charAt(0) == character || a.charAt(0) == character) {
+        char letter = 'n';
+        if(a.charAt(0) == letter || a.charAt(0) == letter) {
             System.out.println("a variable starts with letter");
         }
 
@@ -70,6 +72,7 @@ public class Conditionals {
         // Hint: use your internal, incrementing value of your `for` loop within the `.charAt()` method
         // print something to the console if the condition is met
         String b = "Do you know the muffin man?";
+        char character = 'n';
 
         for(int i = 0; i < b.length(); i++) {
             char charToUpper = Character.toUpperCase(b.charAt(i));
@@ -87,5 +90,71 @@ public class Conditionals {
                 System.out.println(i);
             }
         }
+
+        // Arrays and Conditionals Exercises
+        // Exercise 1
+        /* Write a method that reverses any String and print to console
+            Input should be a string
+            Output should be reversed input */
+        System.out.println(reversed("amigoscode"));
+
+        // Exercise 2
+        /* Given the following String input
+           String input = "   amig os cod e  "
+           Write a method that transforms input into: Amigoscode */
+        String input = "   amig os cod e  ";
+        //System.out.println(transformString(input));
+
+        // Exercise 3
+        /*  Write a method that finds the longest string in any given array.
+            i.e. [] -> ""
+            i.e. ["hello", "ola", "bye", "ciao"] -> hello
+            i.e. ["hello", "hello", "ola", "bye", "ciao"] -> hello
+            i.e. ["hello", "bingo", "ola", "bye", "ciao"] -> hello, bingo
+        */
+        String[] words = {"hello", "bingo", "ola", "bye", "ciao", "booya"};
+        System.out.println(findLongestString(words));
+
+    }
+
+    // Exercise 1 method
+    static String reversed(String input) {
+        String[] inputArr = input.split("");
+        String word = "";
+        for(int i = inputArr.length - 1; i >= 0; i--) {
+            word += inputArr[i];
+        }
+        return word;
+    }
+
+    // Exercise 2 method
+    static String transformString(String input) {
+        String[] stringToArr = input.split(" ");
+        String result = "";
+
+        for(int i = 0; i < stringToArr.length; i++) {
+            result += stringToArr[i];
+        }
+        String capitalizeFirst = result.substring(0,1).toUpperCase();
+        result = capitalizeFirst + result.substring(1);
+        return result;
+    }
+
+    // Exercise 3 method
+    static String findLongestString(String[] words) {
+        String longest = "";
+        String result = "";
+        for(String word : words) {
+            if(word.length() > longest.length()) {
+                longest = word;
+                result = word;
+                continue;
+            }
+            if(word.length() >= longest.length()) {
+                longest = word;
+                result += ", " + word;
+            }
+        }
+        return result;
     }
 }
