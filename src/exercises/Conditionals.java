@@ -103,7 +103,7 @@ public class Conditionals {
            String input = "   amig os cod e  "
            Write a method that transforms input into: Amigoscode */
         String input = "   amig os cod e  ";
-        //System.out.println(transformString(input));
+        System.out.println(transformString(input));
 
         // Exercise 3
         /*  Write a method that finds the longest string in any given array.
