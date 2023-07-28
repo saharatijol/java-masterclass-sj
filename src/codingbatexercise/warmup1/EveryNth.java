@@ -18,12 +18,9 @@ public class EveryNth {
     private static String everyNth(String str, int n) {
         String strBuild = "";
 
-        for(int i = 0; i < str.length(); i++) {
+        for(int i = 0; i < str.length(); i+=n) {
             strBuild += str.charAt(i);
         }
-
-        // Time's up.. To be continued...
-
 
         return strBuild;
     }
