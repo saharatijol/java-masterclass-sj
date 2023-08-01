@@ -1,4 +1,4 @@
-package codingbatexercise.String1;
+package codingbatexercise.string1;
 
 public class NonStart {
     public static void main(String[] args) {
