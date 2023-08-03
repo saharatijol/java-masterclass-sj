@@ -21,5 +21,7 @@ public class Enums {
             String sizeLowercase = size.name().toLowerCase();
             System.out.println(sizeLowercase);
         }
+
     }
+
 }
