@@ -14,10 +14,8 @@ public class DeFront {
                 deFront("ab") → "ab"
                 deFront("xbc") → "bc"
                 deFront("abxyz") → "abxyz"
-
-
-
         * */
+
         System.out.println(deFront("Hello"));
         System.out.println(deFront("java"));
         System.out.println(deFront("away"));
