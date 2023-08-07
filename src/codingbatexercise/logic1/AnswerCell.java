@@ -8,20 +8,36 @@ public class AnswerCell {
                 answerCell(false, false, false) → true
                 answerCell(false, false, true) → false
                 answerCell(true, false, false) → false
+                answerCell(true, true, false) → true
+                answerCell(false, true, false) → true
+                answerCell(true, true, true) → false
         * */
         System.out.println(answerCell(false, false, false));
         System.out.println(answerCell(false, false, true));
         System.out.println(answerCell(true, false, false));
+        System.out.println(answerCell(true, true, false));
+        System.out.println(answerCell(false, true, false));
+        System.out.println(answerCell(true, true, true));
+
     }
 
     private static boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+        boolean answerPhone = false;
 
-        if(isAsleep) {
+        if (isAsleep) {
             return false;
-        } else {
-            return !isMorning && !isMom && !isAsleep
-                    || isMorning && isMom
-                    || !isMorning && isMom && !isAsleep;
         }
+
+        if (isMorning && isMom) {
+            return true;
+        }
+
+        if (!isAsleep) {
+            if (!isMorning && !isMom || !isMorning && isMom) {
+                return true;
+            }
+        }
+
+        return answerPhone;
     }
 }
