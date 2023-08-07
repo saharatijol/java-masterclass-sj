@@ -15,6 +15,13 @@ public class AnswerCell {
     }
 
     private static boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
-        return true;
+
+        if(isAsleep) {
+            return false;
+        } else {
+            return !isMorning && !isMom && !isAsleep
+                    || isMorning && isMom
+                    || !isMorning && isMom && !isAsleep;
+        }
     }
 }
