@@ -16,7 +16,24 @@ public class No14 {
     }
 
     private static boolean no14(int[] nums) {
-        // redo this one
-        return false;
+        boolean hasNo14 = false;
+        boolean hasNo1 = true;
+        boolean hasNo4 = true;
+
+        for(int num : nums) {
+            if(num == 1) {
+                hasNo1 = false;
+            }
+
+            if(num == 4) {
+                hasNo4 = false;
+            }
+        }
+
+        if(hasNo1 || hasNo4){
+            hasNo14 = true;
+        }
+
+        return hasNo14;
     }
 }
