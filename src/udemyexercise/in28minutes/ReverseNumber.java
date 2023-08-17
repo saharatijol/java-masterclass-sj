@@ -26,6 +26,32 @@ public class ReverseNumber {
         }
 
        // redo this one
+        // 123
+        // mod 123%10 = 3 -
+        // div 123/10 = 12
+        // mod 12%10 = 2 -
+        // div 12/10 = 1
+        // mod 1%10 = 1 -
+        // div 1/10 = 0
+
+        // look at the mods,
+        // 3 * 10 = 30
+        // 30 + 2 = 32
+        // 32 * 10 = 320
+        // 320 + 1 = 321
+        int divide = 0;
+        int mod = 0;
+        int reversed = 0;
+
+        while(number > 0) {
+           int digit = number % 10; // 1
+           reversed = reversed * 10 + digit; // 0 * 10 = 0; 0 + 3 = 3 // 2nd iter 3 * 10 = 30 + 2 = 32// 3rd iter: 32 * 10 = 320 + 1 = 321
+           number = number / 10; // 1/10 = 0
+
+        }
+        System.out.println("This is mod: " + 1 % 10);
+        System.out.println("This is divide: " + 1 / 10);
+
 
         return reversedNum;
     }
