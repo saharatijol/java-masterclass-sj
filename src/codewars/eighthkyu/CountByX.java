@@ -1,4 +1,4 @@
-package udemyexercise.in28minutes;
+package codewars.eighthkyu;
 
 import java.util.Arrays;
 
@@ -22,6 +22,9 @@ public class CountByX {
         for(int i = x; i <= iter; i = i + x) {
             countArr[startInd] = i;
             startInd++;
+
+            String convert = countArr.toString();
+            convert.split(",");
         }
         return countArr;
     }
