@@ -24,7 +24,6 @@ public class SmashWords {
             smashedWords += word + " ";
         }
 
-        smashedWords = smashedWords.substring(0, smashedWords.length() - 1);
-        return smashedWords;
+        return smashedWords.trim();
     }
 }
