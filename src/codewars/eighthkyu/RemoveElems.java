@@ -27,6 +27,7 @@ public class RemoveElems {
             newIndex++;
         }
 
+
         return newArr;
     }
 }
